@@ -3,7 +3,8 @@ import Vuex from 'vuex';
 
 import Occupations from '@/data/occupations.js';
 import Stocks from '@/data/stocks.js';
-import {
+import Parameters from '@/data/parameters.js';
+const {
   FINANCIAL_FREEDOM_MODE,
   MAX_LOAN_PER_STAR,
   LOAN_INTEREST_PER_MILLION,
@@ -11,7 +12,7 @@ import {
   HAS_CHILD_LIMIT,
   CHILD_LIMIT,
   INCOME_INCREASE_WHEN_CHILD_ADDED,
-} from '@/data/parameters.js';
+} = Parameters;
 
 const MILLION = 100000;
 
@@ -224,7 +225,7 @@ export default new Vuex.Store({
     _appendStock(state, stock) {
       state.stockInventory.push(stock);
       setValue('stockInventory', state.stockInventory);
-    }
+    },
   },
   actions: {
     // 開始遊戲
